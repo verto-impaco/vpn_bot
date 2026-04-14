@@ -126,7 +126,7 @@ def register_handlers(bot: telebot.TeleBot):
                         message_id=call.message.message_id,
                         media=InputMediaPhoto(
                             media="https://as2.ftcdn.net/v2/jpg/05/32/31/97/1000_F_532319706_82p6u1EnEFxiymxxJSJsVZzqXm90Qx7l.webp",
-                            caption=f"📊 МОЯ ПОДПИСКА\n\n{subscription_text}\n\nЧтобы приобрести подписку передайте ваш айди ({call.from_user.id} владельцу сервиса ({MY_TG})",
+                            caption=f"📊 МОЯ ПОДПИСКА\n\n{subscription_text}\n\nЧтобы приобрести подписку передайте ваш айди ({call.from_user.id}) владельцу сервиса ({MY_TG})",
                             parse_mode="Markdown"
                         ),
                         reply_markup=create_back_keyboard()

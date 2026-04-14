@@ -49,7 +49,7 @@ def get_user_subscription_info(telegram_id: int) -> dict:
 def format_subscription_message(info: dict) -> str:
     """Простое форматирование без рамок и прогресс-бара (если нужно)"""
     if not info["exists"]:
-        return f"❌ {info['reason']}\n\nОбратитесь к администратору для приобретения подписки."
+        return f"❌ {info['reason']}"
 
     msg = "📊 ИНФОРМАЦИЯ О ПОДПИСКЕ\n"
     msg += "═" * 24 + "\n\n"
