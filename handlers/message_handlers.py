@@ -6,6 +6,8 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# https://unsplash.com/photos/vibrant-alien-landscape-with-purple-grass-and-orange-sky-4oWJo3N86os старая пикча
+
 BOT_TOKEN = os.getenv('BOT_TOKEN')
 MY_TG = os.getenv('MY_TG')
 
@@ -94,8 +96,8 @@ def register_handlers(bot: telebot.TeleBot):
                         chat_id=call.message.chat.id,
                         message_id=call.message.message_id,
                         media=InputMediaPhoto(
-                            media="https://unsplash.com/photos/vibrant-alien-landscape-with-purple-grass-and-orange-sky-4oWJo3N86os",
-                            caption=f"💳 *Раздел оплаты*\n\nВыберите способ оплаты или вернитесь в меню: Господа, автоматическая оплата будет возможно реализованна в будущем, а пока что пишите мне в личные сообщения {MY_TG}",
+                            media="https://as2.ftcdn.net/v2/jpg/05/32/31/97/1000_F_532319706_82p6u1EnEFxiymxxJSJsVZzqXm90Qx7l.webp",
+                            caption=f"💳 *Раздел оплаты*\n\nГоспода, автоматическая оплата будет возможно реализованна в будущем, а пока что пишите мне в личные сообщения {MY_TG}",
                             parse_mode="Markdown"
                         ),
                         reply_markup=create_back_keyboard()
@@ -107,7 +109,7 @@ def register_handlers(bot: telebot.TeleBot):
                         chat_id=call.message.chat.id,
                         message_id=call.message.message_id,
                         media=InputMediaPhoto(
-                            media="https://unsplash.com/photos/vibrant-alien-landscape-with-purple-grass-and-orange-sky-4oWJo3N86os",
+                            media="https://as2.ftcdn.net/v2/jpg/05/32/31/97/1000_F_532319706_82p6u1EnEFxiymxxJSJsVZzqXm90Qx7l.webp",
                             caption=f"🆘 *Техническая поддержка*\n\nПо всем вопросам обращайтесь: {MY_TG}\n\nВаш ID: {call.from_user.id}",
                             parse_mode="Markdown"
                         ),
@@ -124,7 +126,7 @@ def register_handlers(bot: telebot.TeleBot):
                         chat_id=call.message.chat.id,
                         message_id=call.message.message_id,
                         media=InputMediaPhoto(
-                            media="https://unsplash.com/photos/vibrant-alien-landscape-with-purple-grass-and-orange-sky-4oWJo3N86os",
+                            media="https://as2.ftcdn.net/v2/jpg/05/32/31/97/1000_F_532319706_82p6u1EnEFxiymxxJSJsVZzqXm90Qx7l.webp",
                             caption=f"📊 МОЯ ПОДПИСКА\n\n{subscription_text}",
                             parse_mode="Markdown"
                         ),
