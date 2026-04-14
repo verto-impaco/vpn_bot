@@ -7,13 +7,13 @@ from dotenv import load_dotenv
 load_dotenv()
 
 BOT_TOKEN = os.getenv('BOT_TOKEN')
+MY_TG = os.getenv('MY_TG')
 
 if BOT_TOKEN is None:
     raise ValueError("Переменная окружения BOT_TOKEN не установлена")
 
 bot = telebot.TeleBot(BOT_TOKEN)
 path_to_image = 'utils/images-_1_.png'
-my_tg = '@ehsjnxndjdjd'
 
 
 def create_main_menu():
@@ -95,7 +95,7 @@ def register_handlers(bot: telebot.TeleBot):
                         message_id=call.message.message_id,
                         media=InputMediaPhoto(
                             media="https://unsplash.com/photos/vibrant-alien-landscape-with-purple-grass-and-orange-sky-4oWJo3N86os",
-                            caption="💳 *Раздел оплаты*\n\nВыберите способ оплаты или вернитесь в меню:",
+                            caption=f"💳 *Раздел оплаты*\n\nВыберите способ оплаты или вернитесь в меню: Господа, автоматическая оплата будет возможно реализованна в будущем, а пока что пишите мне в личные сообщения {MY_TG}",
                             parse_mode="Markdown"
                         ),
                         reply_markup=create_back_keyboard()
@@ -108,7 +108,7 @@ def register_handlers(bot: telebot.TeleBot):
                         message_id=call.message.message_id,
                         media=InputMediaPhoto(
                             media="https://unsplash.com/photos/vibrant-alien-landscape-with-purple-grass-and-orange-sky-4oWJo3N86os",
-                            caption=f"🆘 *Техническая поддержка*\n\nПо всем вопросам обращайтесь: {my_tg}\n\nВаш ID: {call.from_user.id}",
+                            caption=f"🆘 *Техническая поддержка*\n\nПо всем вопросам обращайтесь: {MY_TG}\n\nВаш ID: {call.from_user.id}",
                             parse_mode="Markdown"
                         ),
                         reply_markup=create_back_keyboard()
